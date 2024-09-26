@@ -20,11 +20,6 @@ app.use('/api/rate-limit', apiLimiter, (req, res) => {
   }
 });
 
-// Sample API endpoint
-app.get('/api/hello', (req, res) => {
-  res.json({ message: 'Hello, World!' });
-});
-
 // Start the server
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
