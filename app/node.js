@@ -10,13 +10,15 @@ const apiLimiter = rateLimit({
   max: 50, // Limit each IP to 50 requests per windowMs
   standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
-  message: 'Asshole, too many requests🤮',
+  message: `Asshole, too many requests🤮
+  `,
 });
 
 // Apply the rate limiting middleware to API calls
 app.use('/api/rate-limit', apiLimiter, (req, res) => {
   if (res.statusCode !== 429) {
-    res.send('PASSED');
+    res.send(`PASSED
+      `);
   }
 });
 

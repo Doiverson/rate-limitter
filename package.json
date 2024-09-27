@@ -13,7 +13,8 @@
     "express-rate-limit": "^7.4.0",
     "next": "14.2.13",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "token-bucket": "^0.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
